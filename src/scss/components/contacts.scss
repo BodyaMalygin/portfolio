@@ -1,0 +1,122 @@
+.contacts {
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 78px 0;
+    background: url("../img/boy.png");
+    background-color: #000000;
+    background-position-x: 100%;
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+
+    @include tablet-max {
+        height: auto;
+    }
+
+    &__right {
+        width: 50%;
+        h1 {
+            margin-bottom: 168px;
+            @include tablet-max {
+                margin-bottom: 50px;
+            }
+        }
+        .d-row, .s-row {
+            width: 100%;
+        }
+
+        .d-row {
+            display: flex;
+            justify-content: space-between;
+            input {
+                width: 47%;
+            }
+            margin-bottom: 66px;
+        }
+
+        .s-row { 
+            margin-bottom: 100px;
+            input {
+                width: 100%;
+            }
+            @include tablet-max {
+                margin-bottom: 50px;
+            }
+        }
+
+        input[type="text"] {
+            background-color: rgba(0, 0, 0, 0);
+            border: 0;
+            outline: none;
+            border-bottom: 1px solid #FFFFFF;
+            box-sizing: border-box;
+            padding: 5px 15px 12px 20px;
+            &:placeholder-shown {
+                color: #FFFFFF;
+            }
+            &::placeholder {
+                font-family: 'Proxima Nova Regular';
+                color: #FFFFFF;
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+        @include tablet-max {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 86px 130px;
+        align-items: center;
+        @include tablet-max {
+            flex-direction: column;
+            align-items: center;
+            padding: 25px 100px;
+        }
+    }
+
+    &__left {
+        padding-left: 50px;
+        align-self: flex-end;
+        margin-bottom: 20px;
+        .connect {
+            margin-bottom: 110px;
+            &>div {
+                margin-bottom: 50px;
+                position: relative;
+                i {
+                    position: absolute;
+                    font-size: 18px;
+                    left: -45px;
+                    top: 5px;
+                    color: #fff;
+                }
+            }
+            &__title {
+                margin-bottom: 15px;
+            }
+            &__text {
+                text-decoration: none;
+            }
+            @include tablet-max {
+                margin-bottom: 80px;
+            }
+        }
+        .socials {
+            display: flex;
+            justify-content: space-between;
+            a {
+                color: #FFFFFF;
+                font-size: 18px;
+            }
+        }
+        @include tablet-max {
+            order: 2;
+            align-self: center;
+        }
+    }
+}
